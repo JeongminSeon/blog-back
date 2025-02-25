@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  # devise_for :users  # 사용자 인증 관련 라우팅 추가
+  devise_for :users  # Devise로 사용자 인증 처리
+  root 'posts#index' # 루트 페이지를 PostsController의 index 액션으로 지정
 
-  root "posts#index"  # 홈페이지(기본 페이지) 설정
-
-  resources :posts  # CRUD를 위한 기본적인 RESTful 라우팅
+  resources :posts, only: [:new, :create, :index, :show, :destroy]
 end
