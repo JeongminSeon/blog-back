@@ -7,4 +7,5 @@ gem 'devise'
 gem 'rack-cors'
 gem 'rspec-rails'          
 gem 'factory_bot_rails'   
-gem 'faker'              
+gem 'faker'             
+gem 'bootsnap', require: false

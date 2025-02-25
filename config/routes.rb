@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # devise_for :users  # 사용자 인증 관련 라우팅 추가
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
+  root "posts#index"  # 홈페이지(기본 페이지) 설정
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+  resources :posts  # CRUD를 위한 기본적인 RESTful 라우팅
 end
